@@ -62,7 +62,7 @@ TITLE_STR = "🯉  🯲 🯰 🯴 🯸  🯉"
 INSTR_STR = " [Press w/s/a/d for movement, q for exit]"
 COPYRIGHT_STR = "© 2025 Vatsal Dwivedi. All rights reserved."
 
-DELAYS = {'v':0.06, 'h':0.02, 'm':0.2}
+DELAYS = {'v':0.03, 'h':0.01, 'm':0.1}
 
 class CLI:
 
@@ -331,10 +331,6 @@ class CLI:
         if row < 0 or row > self.board_height - TILE_NROWS - 2\
               or col < 0 or col > self.board_width - TILE_NCOLS - 2:
             raise ValueError(f"Cannot draw a tile with top-left corner at {row, col}!")
-
-        # str_top = C_FULL + C_WIDE_T*(TILE_NCOLS) + C_FULL
-        # str_space = C_FULL + ' '*(TILE_NCOLS) + C_FULL
-        # str_bottom = C_FULL + C_WIDE_B*(TILE_NCOLS) + C_FULL
 
         str_top = C_FULL*(TILE_NCOLS + 2)
         str_space = C_FULL*2 + ' '*(TILE_NCOLS-2) + C_FULL*2

@@ -1,5 +1,5 @@
 import random 
-from board import Board2048
+from .board import Board2048
 
 # Class to represent the AI player
 # At the moment it just makes random moves
